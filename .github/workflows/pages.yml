@@ -31,7 +31,7 @@ jobs:
         run: npm ci
         working-directory: suburban_trapp_site
 
-      - name: Build Tailwind CSS
+      - name: Build site
         run: npm run build
         working-directory: suburban_trapp_site
 
@@ -39,7 +39,7 @@ jobs:
         run: |
           mkdir -p _site/dist
           cp suburban_trapp_site/index.html _site/
-          cp suburban_trapp_site/script.js _site/
+          cp suburban_trapp_site/dist/script.js _site/dist/
           cp suburban_trapp_site/dist/styles.css _site/dist/
 
       - name: Upload Pages artifact

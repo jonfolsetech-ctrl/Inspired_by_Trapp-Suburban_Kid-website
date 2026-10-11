@@ -1,10 +1,14 @@
 {
   "scripts": {
-    "build": "tailwindcss -i styles.css -o dist/styles.css --minify",
-    "dev": "tailwindcss -i styles.css -o dist/styles.css --watch"
+    "build": "tsc --project tsconfig.json && tailwindcss -i styles.css -o dist/styles.css --minify",
+    "dev": "concurrently -k \"npm:dev:css\" \"npm:dev:ts\"",
+    "dev:css": "tailwindcss -i styles.css -o dist/styles.css --watch",
+    "dev:ts": "tsc --project tsconfig.json --watch --preserveWatchOutput"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
   }
 }

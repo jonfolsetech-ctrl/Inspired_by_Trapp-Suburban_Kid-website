@@ -1,10 +1,10 @@
 # INSPIRED BY TRAPP — Suburban Kidd Artist Website
 
-A responsive, static artist-site concept built with semantic HTML, CSS, and vanilla JavaScript.
+A responsive, static artist site built with semantic HTML, TypeScript, and Tailwind CSS.
 
 ## Preview
 
-Install the build dependency and compile the Tailwind stylesheet:
+Install dependencies and build the compiled TypeScript and Tailwind assets:
 
 ```sh
 npm install
@@ -16,7 +16,7 @@ Then run a local server from this folder:
 - Python: `python3 -m http.server 8000`
 - Then visit `http://localhost:8000`
 
-Use `npm run dev` to rebuild the stylesheet when its source changes.
+Use `npm run dev` to watch and rebuild TypeScript and Tailwind while developing.
 
 ## Before publishing
 
